@@ -82,7 +82,7 @@ const props = defineProps({
 }
 @font-face {
   font-family: 'Pacifico'; /* 自定义字体的名称 */
-  src: url('assets/font/Pacifico.ttf'); /* 字体文件的路径 */
+  src: url('/font/Pacifico.ttf'); /* 字体文件的路径 */
 }
 
 .card-text {
