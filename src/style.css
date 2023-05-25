@@ -1,0 +1,13 @@
+body {
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+.dark body {
+    background-color: #222;
+    color: #fff;
+}
+
+#app {
+    text-align: center;
+}
