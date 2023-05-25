@@ -55,7 +55,7 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
 <style scoped>
 .container {  
   overflow: hidden;
-  background-image: url('image.jpg');
+  background-image: url('assets/image.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -85,7 +85,7 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
 }
 @font-face {
   font-family: 'Pacifico'; /* 自定义字体的名称 */
-  src: url('font/Pacifico.ttf'); /* 字体文件的路径 */
+  src: url('assets/font/Pacifico.ttf'); /* 字体文件的路径 */
 }
 .title-wrapper h1 {
   display: inline;
