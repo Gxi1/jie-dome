@@ -8,19 +8,19 @@ import Icon from "@/page/Icon.vue";
 
 
 
-const theme = ref(getThemeIcon());
-const swatchTheme = () => {
-    toggleTheme();
-    theme.value = getThemeIcon();
-}
+// const theme = ref(getThemeIcon());
+// const swatchTheme = () => {
+//     toggleTheme();
+//     theme.value = getThemeIcon();
+// }
 
-const language = ref(getLanguageName());
-const switchLanguage = () => {
-    toggleLanguage();
-    language.value = getLanguageName();
-}
+// const language = ref(getLanguageName());
+// const switchLanguage = () => {
+//     toggleLanguage();
+//     language.value = getLanguageName();
+// }
 
-const goToNotFound = useGoToNotFound();
+// const goToNotFound = useGoToNotFound();
 const avatarSrc = ref("R.gif"); // GIF 图片的路径
 
 </script>
@@ -30,16 +30,16 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
     <div id="homePage">
     <el-container>
       <el-header>Header
-        <el-button @click="swatchTheme" :icon="theme">{{ $t('homePage.swatchThemeButton') }}</el-button>
+        <!-- <el-button @click="swatchTheme" :icon="theme">{{ $t('homePage.swatchThemeButton') }}</el-button>
         <el-icon><HomeFilled /></el-icon>
         <el-button @click="goToNotFound">{{ $t('homePage.notFoundButton') }}</el-button>
-        <el-button @click="switchLanguage">{{ language }}</el-button>
+        <el-button @click="switchLanguage">{{ language }}</el-button> -->
       </el-header>
       <el-main>Main
         <!-- <h1>{{ $t('homePage.title') }}</h1> -->
         <div class="title-wrapper">
           <img :src="avatarSrc" alt="Avatar" class="avatar">
-            <h1>MR Jie</h1>
+            <h1>Xiao jie.top</h1>
           </div>
         <Card/>
         <Icon/>
@@ -78,10 +78,10 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
     justify-content: space-between; /* 设置子元素在主轴上的对齐方式为两端对齐 */
 }
 .el-header {
-  background-color: rgba(128, 128, 128, 0.5); /* 使用RGBA颜色值设置带透明度的背景色 */
+  backdrop-filter: blur(8px); /* 添加虚化效果 */
 }
 .el-footer {
-  background-color: rgba(128, 128, 128, 0.5); /* 使用RGBA颜色值设置带透明度的背景色 */
+  backdrop-filter: blur(8px); /* 添加虚化效果 */
 }
 @font-face {
   font-family: 'Pacifico'; /* 自定义字体的名称 */
