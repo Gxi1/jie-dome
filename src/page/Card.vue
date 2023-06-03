@@ -1,15 +1,11 @@
 <template>
-  <el-card class="card flex-card" :style="{ width: cardWidth, height: cardHeight, marginTop: CardMarginTop, top: CardTop, marginLeft: CardMarginLeft, left: CardLeft }">
-    <div class="card-content">
+  <el-card class="card " :style="{ width: cardWidth, height: cardHeight, marginTop: CardMarginTop, top: CardTop, marginLeft: CardMarginLeft, left: CardLeft }">
       <div class="card-icon"> 
-
       </div>
       <div class="card-text">
         <h2>Hello Word</h2>
         <h3>代码创造未来，数据驱动进步，算法开启智慧，网络连接全球。</h3>
-        <slot></slot>
       </div>
-    </div>
   </el-card>
 </template>
 
@@ -28,7 +24,7 @@ const props = defineProps({
   },
   CardMarginTop: {
     type: String,
-    default: '450px' // 默认高度为450px
+    default: '380px' // 默认高度为360px
   },
   CardTop: {
     type: String,
@@ -66,18 +62,6 @@ const props = defineProps({
 }
 .card-content {
   position: relative; /* 添加相对定位以支持绝对定位的子元素 */
-}
-
-.card-icon {
-  position: absolute; /* 使用绝对定位 */
-  top: 0;
-  left: 0;
-  width: 100px; /* 根据需求调整图标的宽度 */
-  height: 100px; /* 根据需求调整图标的高度 */
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  z-index: 1; /* 将图标置于卡片的最上层 */
 }
 @font-face {
   font-family: 'Pacifico'; /* 自定义字体的名称 */

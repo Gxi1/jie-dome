@@ -5,6 +5,9 @@ import {getThemeIcon, toggleTheme} from "@/tool/themeChange.js";
 import {getLanguageName, toggleLanguage} from "@/tool/languageChange.js";
 import Card from "@/page/Card.vue";
 import Icon from "@/page/Icon.vue";
+import RightCardL from "@/page/RightCardL.vue";
+import RightCardR from "../page/RightCardR.vue";
+import RightCardU from "../page/RightCardU.vue";
 
 
 
@@ -43,6 +46,9 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
           </div>
         <Card/>
         <Icon/>
+        <RightCardL/>
+        <RightCardR/>
+        <RightCardU/>
         <router-view>
         </router-view>
       </el-main>
@@ -69,7 +75,7 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
   text-align: left; /* 调整标题的水平对齐方式 */
   align-items: center; /* 调整标题的垂直对齐方式 */
   margin-left: 90px; /* 调整标题距离左侧的距离 */
-  margin-top: 150px; /* 调整标题距离顶部的距离 */
+  margin-top: 66px; /* 调整标题距离顶部的距离 */
 }
 .el-container {
   height: 100vh; /* 设置容器元素的高度为100%视口高度，确保容器填充整个页面 */

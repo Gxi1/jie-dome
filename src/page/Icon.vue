@@ -21,9 +21,7 @@
 </template>
   
 <script setup>
-import { defineProps } from 'vue';
-import { ref } from 'vue';
-
+import { defineProps,ref } from 'vue';
 const props = defineProps({
   name: {
     type: Array,
@@ -73,7 +71,7 @@ const hideTooltip = () => {
   /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
   width: 460px;
   height: 40px;
-  bottom: 180px;
+  bottom: 260px;
   left: 90px;
   color: #ffffff00;
 }
@@ -84,9 +82,10 @@ const hideTooltip = () => {
   /* 鼠标悬停时提高亮度 */
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: rgba(84, 84, 84, 0.5);
-  /* 使用RGBA颜色值设置带透明度的背景色 */
+  background-color: rgba(128, 128, 128, 0.5); /* 使用RGBA颜色值设置带透明度的背景色 */
   color: #ffffff;
+  backdrop-filter: blur(8px);
+  /* 添加虚化效果 */
 }
 .icon img:hover {
   transform: scale(1.2);
