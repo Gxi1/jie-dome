@@ -71,7 +71,7 @@ const hideTooltip = () => {
   /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
   width: 460px;
   height: 40px;
-  bottom: 260px;
+  bottom: 240px;
   left: 90px;
   color: #ffffff00;
 }
