@@ -26,7 +26,6 @@ import RightCardU from "../page/RightCardU.vue";
 // const goToNotFound = useGoToNotFound();
 const avatarSrc = ref("R.gif"); // GIF 图片的路径
 const backgrounds = ref([
-'/image.jpg',
 '/image1.jpg',
 '/image2.jpg',
 '/image3.jpg',
@@ -34,6 +33,7 @@ const backgrounds = ref([
 '/image5.jpg',
 '/image6.jpg',
 '/image7.jpg',
+'/image8.jpg',
 ]) // 背景图片的路径
 const currentBackground = ref(backgrounds.value[0]) // 当前背景图片的路径
 const changeBackground = () => {
