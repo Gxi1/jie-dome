@@ -25,11 +25,28 @@ import RightCardU from "../page/RightCardU.vue";
 
 // const goToNotFound = useGoToNotFound();
 const avatarSrc = ref("R.gif"); // GIF 图片的路径
+const backgrounds = ref([
+'/image.jpg',
+'/image1.jpg',
+'/image2.jpg',
+'/image3.jpg',
+'/image4.jpg',
+'/image5.jpg',
+'/image6.jpg',
+'/image7.jpg',
+]) // 背景图片的路径
+const currentBackground = ref(backgrounds.value[0]) // 当前背景图片的路径
+const changeBackground = () => {
+    const index = backgrounds.value.indexOf(currentBackground.value)
+    currentBackground.value = backgrounds.value[(index + 1) % backgrounds.value.length]
+}
+setInterval(changeBackground, 60000) // 每一分钟切换一次背景图片
+
 
 </script>
 
 <template>
-<div class="container">
+<div class="container" :style="{ backgroundImage: `url(${currentBackground})` }">
     <div id="homePage">
     <el-container>
       <el-header>Header
@@ -61,7 +78,6 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
 <style scoped>
 .container {  
   overflow: hidden;
-  background-image: url('/image.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -70,6 +86,8 @@ const avatarSrc = ref("R.gif"); // GIF 图片的路径
   left: 0;
   width: 100%;
   height: 100%;
+  transition: background-image 2s ease-in-out 0s;
+  /* 添加过渡效果 */
 }
 .title-wrapper {
   text-align: left; /* 调整标题的水平对齐方式 */
