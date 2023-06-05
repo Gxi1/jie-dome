@@ -1,5 +1,5 @@
 ### 快速启动
-![Github stars]（https://gxi1.github.io/jie-dome/#/）
+![Github stars](https://gxi1.github.io/jie-dome/#/)
 ### 安装依赖
 
 ``` bash
