@@ -51,7 +51,7 @@ const props = defineProps({
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* 添加过渡效果 */
   /* 弹性盒子属性 */
   display: flex;
-  flex-direction: row; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
+  flex-direction: column; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
   justify-content: center; /* 在主轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
   align-items: center; /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
 }

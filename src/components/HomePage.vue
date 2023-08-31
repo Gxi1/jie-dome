@@ -77,6 +77,8 @@ setInterval(changeBackground, 60000) // 每一分钟切换一次背景图片
 
 <style scoped>
 .container {  
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -112,15 +114,17 @@ setInterval(changeBackground, 60000) // 每一分钟切换一次背景图片
   src: url('/font/Pacifico.ttf'); /* 字体文件的路径 */
 }
 .title-wrapper h1 {
-  display: inline;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
   font-size: 50px;
   color: #423e3e;
   font-family: 'Pacifico', sans-serif;
-  margin-left: 40px;
+  margin-left: 150px;
+  margin-top: -60px;
 }
 .avatar {
-  display: inline;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   border-radius: 50%; /* 将图片设置为圆形 */
   width: 150px; /* 根据需求调整头像的宽度 */
