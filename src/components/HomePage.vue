@@ -171,6 +171,7 @@ const deg = 6; // 角度值
   height: 100%;
   transition: background-image 2s ease-in-out 0s;
   /* 添加过渡效果 */
+  overflow: hidden; /* 隐藏溢出的内容 */
 }
 
 .title-wrapper {
@@ -215,8 +216,8 @@ const deg = 6; // 角度值
 .title-wrapper h1 {
   display: flex;
   flex-direction: row;
-  font-size: 50px;
-  color: #423e3e;
+  font-size: 3em;
+  color: #000000;
   font-family: "Pacifico", sans-serif;
   margin-left: 150px;
   margin-top: -60px;

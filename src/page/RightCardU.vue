@@ -30,23 +30,20 @@
 <style lang="scss" scoped>
 .links{
     width: 50%;
-  margin-right: 10px;
-  &.hidden {
-    display: none;
-  }
-  @media (max-width: 720px) {
-    margin-right: 0;
-    width: 100%;
-  }
-
+    margin-right: 10px;
+    display: flex;
+    margin: 0 auto; /* 适当的外边距 */
+    flex-wrap: wrap; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
+    justify-content: space-around; /* 在主轴上居左对齐，可以根据需要修改为flex-start、flex-end等 */
+    align-items: center; 
 }
 .title {
     position: absolute;
     width: 200px;
     height: 100px;
-    bottom: 300px;
+    bottom: 320px;
     right: 580px;
-    font-size: 20px;
+    font-size: 1.5em;
     color: #fff;
     font-family: 'Pacifico';
 
@@ -56,9 +53,8 @@
     src: url('/font/Pacifico.ttf'); /* 字体文件的路径 */
   }
 .icon {
-    position: absolute;
-    /* 使用绝对定位 */
-    border-radius: 4px;
+    position: relative;  /* 使用相对定位 */
+   border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: rgba(128, 128, 128, 0.5);
     /* 使用RGBA颜色值设置带透明度的背景色 */
@@ -68,18 +64,19 @@
     /* 添加过渡效果 */
     /* 弹性盒子属性 */
     display: flex;
-    flex: 1; /* 填充剩余空间 */
-  margin: 10px; /* 适当的外边距 */
-    flex-direction: row;
-    /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
-    justify-content: center;
-    /* 在主轴上居左对齐，可以根据需要修改为flex-start、flex-end等 */
+    margin: 10px auto; /* 适当的外边距 */
+    flex-wrap: wrap; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
+    justify-content: space-around; /* 在主轴上居左对齐，可以根据需要修改为flex-start、flex-end等 */
     align-items: center;
     /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
     width: 200px;
-    height: 100px;
-    bottom: 260px;
-    right: 580px;
+    height: 120px;
+    left: 300px;
+    top: 90px;
+    font-size: 1em;
+    color: #fff;
+    font-family: 'Pacifico';
+    margin-right: 10px;
 }
 
 .icon:hover {
@@ -87,29 +84,5 @@
     filter: brightness(1.12);
     /* 鼠标悬停时提高亮度 */
 }
-
-.icon2 {
-    bottom: 260px;
-    right: 350px;
-}
-
-.icon3 {
-    bottom: 260px;
-    right: 120px;
-}
-
-.icon4 {
-    bottom: 130px;
-    right: 580px;
-}
-
-.icon5 {
-    bottom: 130px;
-    right: 350px;
-}
-
-.icon6 {
-    bottom: 130px;
-    right: 120px;
-}</style>
+</style>
     

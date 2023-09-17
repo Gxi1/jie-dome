@@ -44,7 +44,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .card {
   position: absolute; /* 使用绝对定位 */
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: rgba(128, 128, 128, 0.5); /* 使用RGBA颜色值设置带透明度的背景色 */
   backdrop-filter: blur(8px); /* 添加虚化效果 */
@@ -58,13 +58,7 @@ const props = defineProps({
   align-items: center; /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
   width: 50%;
   margin-right: 10px;
-  &.hidden {
-    display: none;
-  }
-  @media (max-width: 720px) {
-    margin-right: 0;
-    width: 100%;
-  }
+  overflow: hidden;
 }
 
 .card:hover {
@@ -85,12 +79,12 @@ const props = defineProps({
   font-family: 'Pacifico', sans-serif;
 }
 .card-text h2{
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: bold;
   color: #fff;
 }
 .card-text h3{
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
   color: #fff;
 }

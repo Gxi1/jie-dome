@@ -77,13 +77,7 @@ const hideTooltip = () => {
   left: 90px;
   color: #ffffff00;
   margin-right: 10px;
-  &.hidden {
-    display: none;
-  }
-  @media (max-width: 720px) {
-    margin-right: 0;
-    width: 100%;
-  }
+  overflow: hidden;
 }
 
 .icon:hover {

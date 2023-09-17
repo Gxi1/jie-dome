@@ -6,6 +6,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
 }
 
@@ -26,6 +27,18 @@ body,
     justify-content: center !important;
   }
 }
+//横屏的对应样式
+@media screen and (orientation: landscape) {
+  .el-radio-group {
+    justify-content: center !important;
+  }
+}
+//竖屏的对应样式
+@media screen and (orientation: portrait) {
+  .el-radio-group {
+    justify-content: center !important;
+  }
+}
 
 /* 小于1280px时 */
 @media (max-width: 1280px) {
@@ -39,8 +52,19 @@ body,
 
 /* 小于720px时 */
 @media (max-width: 720px) {
-  // 隐藏元素
-  .xs-hidden {
-    display: none;
+  @include changeWidth($maxWidth: 600px);
+}
+/* 小于540px时 */
+@media (max-width: 540px) {
+  @include changeWidth($maxWidth: 400px);
+}
+/* 小于375px时 */
+@media (max-width: 375px) {
+  @include changeWidth($maxWidth: 300px);
+}
+/* 小于320px时隐藏 */
+@media (max-width: 320px) {
+  .el-radio-group {
+    display: none !important;
   }
 }

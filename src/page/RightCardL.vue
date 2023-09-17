@@ -73,27 +73,26 @@ onMounted(() => {
   <style lang="scss" scoped>
   .card {
     position: absolute; /* 使用绝对定位 */
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: rgba(128, 128, 128, 0.5); /* 使用RGBA颜色值设置带透明度的背景色 */
     backdrop-filter: blur(8px); /* 添加虚化效果 */
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* 添加过渡效果 */
-    /* 弹性盒子属性 */
     display: flex;
-    flex: 1; /* 填充剩余空间 */
-  margin: 10px; /* 适当的外边距 */
-    flex-direction: row; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
-    justify-content: center; /* 在主轴上居左对齐，可以根据需要修改为flex-start、flex-end等 */
-    align-items: center; /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
-    width: 50%;
-  margin-right: 10px;
-  &.hidden {
-    display: none;
-  }
-  @media (max-width: 720px) {
-    margin-right: 0;
-    width: 100%;
-  }
+    margin: 0 auto; /* 适当的外边距 */
+    flex-wrap: wrap; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
+    justify-content: space-around; /* 在主轴上居左对齐，可以根据需要修改为flex-start、flex-end等 */
+    align-items: center;
+    // /* 弹性盒子属性 */
+    // display: flex;
+    // flex: 1; /* 填充剩余空间 */
+    // margin: 10px; /* 适当的外边距 */
+    // flex-direction: row; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
+    // justify-content: center; /* 在主轴上居左对齐，可以根据需要修改为flex-start、flex-end等 */
+    // align-items: center; /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
+    // width: 50%;
+    // margin-right: 10px;
+  overflow: hidden;
   }
   
   .card:hover {
@@ -116,7 +115,7 @@ onMounted(() => {
     color: #fff;
   }
     .text {
-      font-size: 16px;
+      font-size: 1.1em;
       word-break: break-all;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -127,7 +126,7 @@ onMounted(() => {
       margin-top: 10px;
       font-weight: bold;
       align-self: flex-end;
-      font-size: 18px;
+      font-size: 1.2em;
     }
   </style>
   
