@@ -53,7 +53,7 @@ const hideTooltip = () => {
 
 </script>
   
-<style scoped>
+<style lang="scss" scoped>
 .icon {
   position: absolute;
   /* 使用绝对定位 */
@@ -63,6 +63,8 @@ const hideTooltip = () => {
   /* 添加过渡效果 */
   /* 弹性盒子属性 */
   display: flex;
+  flex: 1; /* 填充剩余空间 */
+  margin: 10px; /* 适当的外边距 */
   flex-direction: row;
   /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
   justify-content: left;
@@ -74,6 +76,14 @@ const hideTooltip = () => {
   bottom: 240px;
   left: 90px;
   color: #ffffff00;
+  margin-right: 10px;
+  &.hidden {
+    display: none;
+  }
+  @media (max-width: 720px) {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .icon:hover {

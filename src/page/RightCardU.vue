@@ -27,7 +27,19 @@
 <script setup>
 </script>
     
-<style scoped>
+<style lang="scss" scoped>
+.links{
+    width: 50%;
+  margin-right: 10px;
+  &.hidden {
+    display: none;
+  }
+  @media (max-width: 720px) {
+    margin-right: 0;
+    width: 100%;
+  }
+
+}
 .title {
     position: absolute;
     width: 200px;
@@ -56,6 +68,8 @@
     /* 添加过渡效果 */
     /* 弹性盒子属性 */
     display: flex;
+    flex: 1; /* 填充剩余空间 */
+  margin: 10px; /* 适当的外边距 */
     flex-direction: row;
     /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
     justify-content: center;

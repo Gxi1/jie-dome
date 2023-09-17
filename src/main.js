@@ -1,4 +1,5 @@
 import {createApp, provide, ref} from 'vue'
+import { createPinia } from 'pinia';
 import './style.css'
 import App from './App.vue'
 import 'element-plus/dist/index.css'
@@ -41,6 +42,9 @@ app.directive('highlight', (el) => {
         hljs.highlightBlock(block)
     })
 })
+const pinia = createPinia();
+app.use(pinia);
+
 
 // 挂载 Vue 应用实例到页面元素上
 app.mount('#app')

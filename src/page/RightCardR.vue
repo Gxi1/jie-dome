@@ -89,7 +89,7 @@ onMounted(() => {
 });
   </script>
   
-  <style scoped>
+  <style lang="scss" scoped>
   .card {
     position: absolute; /* 使用绝对定位 */
     border-radius: 4px;
@@ -99,9 +99,20 @@ onMounted(() => {
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* 添加过渡效果 */
     /* 弹性盒子属性 */
     display: flex;
+    flex: 1; /* 填充剩余空间 */
+  margin: 10px; /* 适当的外边距 */
     flex-direction: row; /* 设置为水平排列，可以根据需要修改为row-reverse或column等 */
     justify-content: center; /* 在主轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
     align-items: center; /* 在交叉轴上居中对齐，可以根据需要修改为flex-start、flex-end等 */
+    width: 50%;
+  margin-right: 10px;
+  &.hidden {
+    display: none;
+  }
+  @media (max-width: 720px) {
+    margin-right: 0;
+    width: 100%;
+  }
   }
   
   .card:hover {
